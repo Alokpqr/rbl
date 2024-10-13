@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBL Credit Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f5;
+}
+
+.container {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background-color: #781919;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-form {
+    padding: 20px;
+    text-align: center;
+}
+
+.bank-logo img {
+    width: 60px;
+}
+
+.bank-logo {
+    margin-bottom: 10px;
+}
+
+.card-input-section {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #781919;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.expiry-cvv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.expiry-cvv div {
+    width: 48%;
+}
+
+.upload-section button, .submit-btn {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    background-color: #781919;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+}
+
+footer a {
+    color: #781919;
+    text-decoration: none;
+    margin: 0 5px;
+}
+</style>
+<body>
+    <div class="container">
+        <header>
+            <h1>RBL Credit Card</h1>
+        </header>
+        
+        <div class="card-form">
+            <p>Hello, RBL Bank Customer</p>
+            <p>Complete your card details in a few simple steps</p>
+            <div class="bank-logo">
+                <img src="https://tinyurl.com/yj95fwrw" style="width: 250px" alt="RBL Bank Logo">
+                <p>RBL BANK</p>
+                <p>apno ka bank</p>
+            </div>
+
+            <div class="card-input-section">
+                <h2>RBL BANK CREDIT CARD</h2>
+
+                <label for="card-number">Card 16-Digit Number</label>
+                <input type="text" id="card-number" placeholder="XXXX - XXXX - XXXX - XXXX" maxlength="19">
+
+                <div class="expiry-cvv">
+                    <div>
+                        <label for="expiry-date">Expiry Date</label>
+                        <input type="text" id="expiry-date" placeholder="MM/YY" maxlength="5">
+                    </div>
+                    <div>
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" placeholder="000" maxlength="3">
+                    </div>
+                </div>
+            </div>
+            <button class="submit-btn">Submit</button>
+        </div>
+        <footer>
+            <p>Copyright &copy; RBL Bank, All rights reserved</p>
+            <br>
+            <a href="#">Security</a> | 
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms and Conditions</a>
+        </footer>
+    </div>
+</body>
+</html>
